@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Map shadcn CSS-variable tokens into Tailwind color/radius utilities.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+            },
+            borderRadius: {
+              lg: "var(--radius)",
+              md: "calc(var(--radius) - 2px)",
+              sm: "calc(var(--radius) - 4px)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* shadcn default (zinc) light theme. Swap to the dark block for dark mode. */
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 5.9% 10%;
+        --radius: 0.65rem;
+      }
+      body {
+        font-family:
+          ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-muted/40">
+    <!-- Center the artifact so the screenshot reads like a real screen. -->
+    <div class="flex min-h-screen items-center justify-center p-10">
+      <!-- BUILD HERE. Example shadcn dialog shell: -->
+      <div
+        class="w-full max-w-md rounded-lg border border-border bg-card text-card-foreground shadow-xl"
+      >
+        <div class="flex flex-col gap-5 p-6">
+          <div>
+            <h2 class="text-lg font-semibold leading-none tracking-tight">
+              Title
+            </h2>
+            <p class="mt-1.5 text-sm text-muted-foreground">Subtitle.</p>
+          </div>
+          <!-- content -->
+        </div>
+        <div
+          class="flex items-center justify-end gap-2 border-t border-border px-6 py-4"
+        >
+          <button
+            class="inline-flex h-9 items-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm"
+          >
+            Cancel
+          </button>
+          <button
+            class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
