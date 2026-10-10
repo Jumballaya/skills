@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Coordinator"
+  short_description: "Coordinate polling, PR reviews, and live feature tests"
+  default_prompt: "Use $pr-coordinator to monitor this repository, assign a reviewer and tester to each open PR, restart them on relevant updates, and coordinate current-revision reports."

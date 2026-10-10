@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Tester"
+  short_description: "Run PR changes and report evidence-backed test results"
+  default_prompt: "Use $pr-tester to test this PR at its exact revision through the real application, then report observed results, actionable failures, and a test-confidence score."
